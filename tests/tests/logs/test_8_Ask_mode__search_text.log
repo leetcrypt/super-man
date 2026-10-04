@@ -1,0 +1,20 @@
+[0;36mSearching for:[0m "search text"
+
+[0;32mFound 5 matches:[0m
+
+[0;36m1.[0m [0;32mSearch for text pattern in files recursively[0m
+   [0;35mgrep -r "pattern" .[0m
+
+[0;36m2.[0m [0;32mSearch for available packages[0m
+   [0;35mapt search <term>[0m
+
+[0;36m3.[0m [0;32mFind and replace text in files[0m
+   [0;35msed -i 's/old/new/g' file.txt[0m
+
+[0;36m4.[0m [0;32mView, search and reuse previously run commands[0m
+   [0;35mhistory[0m
+
+[0;36m5.[0m [0;32mFind files by name pattern[0m
+   [0;35mfind . -name "*.txt"[0m
+
+[0;33mTip:[0m Use more specific keywords to narrow results

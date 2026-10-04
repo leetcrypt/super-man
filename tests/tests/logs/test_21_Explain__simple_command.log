@@ -1,0 +1,20 @@
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;33mCommand:[0m [0;35mls -la[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+[0;36m[1mSYNTAX:[0m
+  [0;36m[1mls[0m [[0;33mOPTION[0m][2m...[0m [[0;33mFILE[0m][2m...[0m
+
+[0;36m[1mEXAMPLE:[0m
+  [0;32mls -lah                    # List all files with human-readable sizes[0m
+
+[0;32mDescription:[0m List files sorted by size (largest first)
+
+[0;33mFlag explanations:[0m
+  -l : Long format (detailed info)
+  -h : Human readable sizes (KB, MB, GB)
+  -S : Sort by size (largest first)
+
+
+[0;34m═══════════════════════════════════════════════════════════[0m

@@ -1,0 +1,60 @@
+[1m[0;36m
+═══════════════════════════════════════════════════════════
+  Super Man Test Suite
+  2026-06-13 10:19:15
+═══════════════════════════════════════════════════════════
+[0m
+Testing Interactive Mode
+Script: /home/dell/coding/bash/super-man/super-man.sh
+
+
+[1m[0;34m▶ Testing: Interactive Mode - Automated Testing[0m
+[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[0;33mWarning: 'expect' not installed. Installing for interactive testing...[0m
+
+[0;36mTest #1: Launch interactive mode and exit immediately[0m
+[0;31m✗ FAILED[0m
+
+[0;36mTest #2: Select command and view flags[0m
+[0;33m⚠ PARTIAL[0m - Could not verify flag display
+
+[0;36mTest #3: Filter commands by category[0m
+[0;33m⚠ PARTIAL[0m - Could not verify filtering
+
+[0;36mTest #4: Test multiple commands (ls, tar, find)[0m
+[0;31m✗ FAILED[0m
+
+[1m[0;34m▶ Testing: Interactive Mode - Performance Analysis[0m
+[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[0;35mTesting interactive mode startup performance (5 iterations)[0m
+
+  Iteration 1: [0;31mFAILED[0m
+  Iteration 2: [0;31mFAILED[0m
+  Iteration 3: [0;31mFAILED[0m
+  Iteration 4: [0;31mFAILED[0m
+  Iteration 5: [0;31mFAILED[0m
+
+[1m[0;36m
+═══════════════════════════════════════════════════════════
+  Test Summary
+═══════════════════════════════════════════════════════════
+[0m
+[1mResults:[0m
+  Total Tests:  4
+  [0;32mPassed:       2[0m
+  [0;31mFailed:       2[0m
+  [0;33mSkipped:      0[0m
+
+[1mPass Rate: 50%[0m
+
+[0;36mLogs saved to: ./tests/logs[0m
+[0;36mPerformance data: ./tests/performance[0m
+
+[1m[0;36m═══════════════════════════════════════════════════════════[0m
+
+[0;32mJSON report generated: ./tests/logs/test-report.json[0m
+
+[0;36mInteractive mode testing complete![0m
+[0;36mLogs: ./tests/logs[0m
+[0;36mPerformance: ./tests/performance[0m

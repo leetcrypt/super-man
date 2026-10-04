@@ -1,0 +1,20 @@
+[0;36mSearching for:[0m "find all files larger than 100MB that were modified in the last week and contain specific text patterns"
+
+[0;32mFound 5 matches:[0m
+
+[0;36m1.[0m [0;32mFind files larger than 100MB[0m
+   [0;35mfind . -type f -size +100M -exec ls -lh {} \;[0m
+
+[0;36m2.[0m [0;32mFind recently modified files[0m
+   [0;35mfind . -type f -mtime -1[0m
+
+[0;36m3.[0m [0;32mFind and replace text in files[0m
+   [0;35msed -i 's/old/new/g' file.txt[0m
+
+[0;36m4.[0m [0;32mInspect installed .deb packages and their files[0m
+   [0;35mdpkg -l[0m
+
+[0;36m5.[0m [0;32mFind files by name pattern[0m
+   [0;35mfind . -name "*.txt"[0m
+
+[0;33mTip:[0m Use more specific keywords to narrow results

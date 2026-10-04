@@ -1,0 +1,20 @@
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;33mCommand:[0m [0;35mfind . -name "*.txt"[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+[0;36m[1mSYNTAX:[0m
+  [0;36m[1mfind[0m  [-H]  [-L] [-P] [-D debugopts] [-Olevel] [starting-point[2m...[0m] [ex‐        pression]
+
+[0;36m[1mEXAMPLE:[0m
+  [0;32mfind . -name '*.txt'      # Find all .txt files[0m
+
+[0;32mDescription:[0m Find files larger than 100MB
+
+[0;33mFlag explanations:[0m
+  -type f : Only files (not directories)
+  -size +100M : Size greater than 100 megabytes
+  -exec : Execute command on each found file
+
+
+[0;34m═══════════════════════════════════════════════════════════[0m

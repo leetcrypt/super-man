@@ -1,0 +1,76 @@
+model|id|category|difficulty|query|latency_s|command
+qwen2.5-coder:1.5b|q01|files|easy|list the 5 largest files in the current directory|9.42|ls -lh ¦ tail -n 5
+qwen2.5-coder:1.5b|q02|files|easy|show hidden files in long format|5.12|ls -al
+qwen2.5-coder:1.5b|q03|files|medium|find files larger than 100MB under the home directory|17.79|find ~ -type f -size +100M -exec du {} \; ¦ grep -B1 "100M" ¦¦ echo "No files found larger than 100MB."
+qwen2.5-coder:1.5b|q04|files|medium|recursively change permissions of all directories to 755|8.63|find . -type d -exec chmod 755 {} +
+qwen2.5-coder:1.5b|q05|files|hard|find duplicate files by content in the current tree|14.29|find . -type f -exec md5sum {} + ¦ sort -k1,1 ¦ uniq -d ¦ xargs --no-run-if-empty md5sum -c
+qwen2.5-coder:1.5b|q06|text|easy|count the number of lines in all python files|3.03|find . -name "*.py" ¦ xargs wc -l
+qwen2.5-coder:1.5b|q07|text|medium|replace all tabs with two spaces in config.txt in place|2.82|sed 's/	/  /g' config.txt > temp && mv temp config.txt
+qwen2.5-coder:1.5b|q08|text|medium|print the 10 most common words in access.log|4.52|awk '{print $7}' access.log ¦ tr -cd '[:alnum:]' ¦ sort ¦ uniq -c ¦ sort -nr ¦ head -n 10
+qwen2.5-coder:1.5b|q09|text|hard|sum the numbers in the third column of data.csv|2.23|awk 'NR>2{print $3}' data.csv ¦ bc
+qwen2.5-coder:1.5b|q10|search|easy|recursively search for the word TODO in all js files|3.43|find . -name "*.js" -exec grep -H "TODO" {} \;
+qwen2.5-coder:1.5b|q11|search|medium|find files modified in the last 24 hours|1.87|find . -type f -mtime -1
+qwen2.5-coder:1.5b|q12|search|hard|find python files that import requests but not os|4.06|find . -name '*.py' -exec grep -E 'import requests¦from requests import.*' {} \; -not -path '*/os.py'
+qwen2.5-coder:1.5b|q13|process|easy|show the top 10 processes by memory usage|2.50|ps aux ¦ sort -nr -k4 ¦ head -n10
+qwen2.5-coder:1.5b|q14|process|medium|kill the process listening on port 8080|2.82|kill -9 $(ss -tuln ¦ grep :8080 ¦ awk '{print $7}')
+qwen2.5-coder:1.5b|q15|process|hard|show the total cpu time used by all chrome processes|3.39|ps -e -o pcpu= --no-headers ¦ sort -hr ¦ head -n 10
+qwen2.5-coder:1.5b|q16|network|easy|download a file from a url and save it as out.bin|2.51|curl -O https://example.com/out.bin
+qwen2.5-coder:1.5b|q17|network|medium|list all open listening tcp ports with the owning process|9.46|netstat -tuln ¦ awk '$5 ~ /^/ {print $1, $3}'
+qwen2.5-coder:1.5b|q18|network|hard|test whether port 443 is open on example.com|4.61|echo -e "Checking if port 443 is open on www.example.com..."
+qwen2.5-coder:1.5b|q19|archive|easy|compress the folder logs into a gzip tarball|1.74|tar czvf logs.tar.gz logs/
+qwen2.5-coder:1.5b|q20|archive|medium|extract only txt files from archive.tar.gz|5.12|tar -xzvf archive.tar.gz -T ¦ grep "\.(txt)$"
+qwen2.5-coder:1.5b|q21|system|easy|show disk usage of the current directory in human readable form|1.95|du -h
+qwen2.5-coder:1.5b|q22|system|medium|show the 5 largest directories under /var|2.16|du -lh ¦ sort -rh ¦ head -n 5
+qwen2.5-coder:1.5b|q23|git|easy|show the last 5 git commits in one line each|1.74|git log -n 5
+qwen2.5-coder:1.5b|q24|git|medium|list files changed in the last commit|1.96|git diff --name-only HEAD~1
+qwen2.5-coder:1.5b|q25|git|hard|find the commit that introduced the string getUserById|2.59|git log --diff-filter=A --grep 'getUserById' ¦ head -n 1
+qwen2.5:3b|q01|files|easy|list the 5 largest files in the current directory|5.13|ls -lSr ¦ head -n 5
+qwen2.5:3b|q02|files|easy|show hidden files in long format|1.82|ls -alh .*
+qwen2.5:3b|q03|files|medium|find files larger than 100MB under the home directory|3.34|find ~ -type f -size +100M
+qwen2.5:3b|q04|files|medium|recursively change permissions of all directories to 755|2.82|chmod -R 755 *
+qwen2.5:3b|q05|files|hard|find duplicate files by content in the current tree|7.89|find . -type f -exec file --mime-type {} + ¦ awk '{print $NF}' ¦ sort ¦ uniq -d ¦ xargs -I {} find . -type f -name '{}'
+qwen2.5:3b|q06|text|easy|count the number of lines in all python files|3.83|find . -name "*.py" -exec grep -c . {} \;
+qwen2.5:3b|q07|text|medium|replace all tabs with two spaces in config.txt in place|3.76|sed -i 's/	/  /g' config.txt
+qwen2.5:3b|q08|text|medium|print the 10 most common words in access.log|6.96|grep -o '[^ ]\+' access.log ¦ sort ¦ uniq -c ¦ sort -nr ¦ head -n 10
+qwen2.5:3b|q09|text|hard|sum the numbers in the third column of data.csv|5.63|bash
+qwen2.5:3b|q10|search|easy|recursively search for the word TODO in all js files|15.53|find . -type f -name "*.js" -exec grep -l "TODO" {} \;
+qwen2.5:3b|q11|search|medium|find files modified in the last 24 hours|16.56|find . -type f -mtime -1 -exec ls -l {} \;
+qwen2.5:3b|q12|search|hard|find python files that import requests but not os|18.96|find . -name "*.py" -exec pygrep -l "import requests" {} \; ¦ xargs -I{} grep -ls "{}" *os*
+qwen2.5:3b|q13|process|easy|show the top 10 processes by memory usage|11.50|ps -eo pid,size,%mem,comm ¦ sort -k3nr ¦ head -n 10
+qwen2.5:3b|q14|process|medium|kill the process listening on port 8080|8.46|kill $(lsof -i :8080 -t)
+qwen2.5:3b|q15|process|hard|show the total cpu time used by all chrome processes|11.70|ps -eo pid,lstart,time ¦ grep chrome ¦ awk '{total+=$8} END {print total}'
+qwen2.5:3b|q16|network|easy|download a file from a url and save it as out.bin|5.86|wget -O out.bin "url"
+qwen2.5:3b|q17|network|medium|list all open listening tcp ports with the owning process|11.28|netstat -tuln ¦ awk '{print $4}' ¦ sort ¦ uniq -c
+qwen2.5:3b|q18|network|hard|test whether port 443 is open on example.com|8.30|nc -vz example.com 443
+qwen2.5:3b|q19|archive|easy|compress the folder logs into a gzip tarball|9.95|gzip -cvf logs/*.txt ¦ cat > logs_$(date +%Y%m%d).tar.gz
+qwen2.5:3b|q20|archive|medium|extract only txt files from archive.tar.gz|6.20|tar -zxf archive.tar.gz --wildcards '*/.*'
+qwen2.5:3b|q21|system|easy|show disk usage of the current directory in human readable form|2.19|du -sh * ..
+qwen2.5:3b|q22|system|medium|show the 5 largest directories under /var|4.83|find /var -type d -printf '%b	%p
+qwen2.5:3b|q23|git|easy|show the last 5 git commits in one line each|3.59|git log -5 --oneline --format='%H %ad ¦ %s'
+qwen2.5:3b|q24|git|medium|list files changed in the last commit|3.30|git log -1 --format="%B" --abbrev-commit ¦ wc -m
+qwen2.5:3b|q25|git|hard|find the commit that introduced the string getUserById|3.45|git log -p --diff-filter=A --summary --grep='getUserById'
+westenfelder/NL2SH|q01|files|easy|list the 5 largest files in the current directory|3.96|ls -Sh ¦ head
+westenfelder/NL2SH|q02|files|easy|show hidden files in long format|3.09|ls -la .*
+westenfelder/NL2SH|q03|files|medium|find files larger than 100MB under the home directory|5.51|find ~/ -size +100M
+westenfelder/NL2SH|q04|files|medium|recursively change permissions of all directories to 755|8.50|find . -type d -print0 ¦ xargs -0 chmod 755
+westenfelder/NL2SH|q05|files|hard|find duplicate files by content in the current tree|4.09|fdupes -r .
+westenfelder/NL2SH|q06|text|easy|count the number of lines in all python files|7.06|cat $(find . -name "*.py") ¦ wc -l
+westenfelder/NL2SH|q07|text|medium|replace all tabs with two spaces in config.txt in place|7.49|sed -i 's/	/  /' config.txt
+westenfelder/NL2SH|q08|text|medium|print the 10 most common words in access.log|17.90|cut -d' ' -f4-5 access.log ¦ tr A-Z a-z ¦ awk '{print $2}'¦ sort ¦ uniq -c ¦ sort -nr ¦ head -n10;
+westenfelder/NL2SH|q09|text|hard|sum the numbers in the third column of data.csv|17.42|awk -F, 'BEGIN{srand();}{print rand() "	" $3}' <(sort -R data.csv) ¦ awk '{sum+=$2}END{print sum}'
+westenfelder/NL2SH|q10|search|easy|recursively search for the word TODO in all js files|7.72|find . -name '*.js' ¦ xargs grep 'TODO'
+westenfelder/NL2SH|q11|search|medium|find files modified in the last 24 hours|4.20|find . -mtime -1
+westenfelder/NL2SH|q12|search|hard|find python files that import requests but not os|16.41|find . -type f \( -name "*.py" \) -exec grep -q "import requests" {} \; -a -not -exec grep -q "import os" {} \; -print
+westenfelder/NL2SH|q13|process|easy|show the top 10 processes by memory usage|8.90|ps -eo pid,ppid,%mem,cmd ¦ sort -k3nr ¦ head
+westenfelder/NL2SH|q14|process|medium|kill the process listening on port 8080|5.71|fuser -k 8080/tcp
+westenfelder/NL2SH|q15|process|hard|show the total cpu time used by all chrome processes|13.11|top -b -n 1 ¦ grep Chrome ¦ awk '{total+=$9} END {print "Total CPU Time: ", total, "s"}'
+westenfelder/NL2SH|q16|network|easy|download a file from a url and save it as out.bin|6.18|curl -o out.bin http://example.com/file.bin
+westenfelder/NL2SH|q17|network|medium|list all open listening tcp ports with the owning process|7.38|lsof -i TCP -sTCP:LISTEN ¦ grep LISTEN
+westenfelder/NL2SH|q18|network|hard|test whether port 443 is open on example.com|5.87|nc -zw1 example.com 443
+westenfelder/NL2SH|q19|archive|easy|compress the folder logs into a gzip tarball|5.01|tar -czf logs.tar.gz logs/
+westenfelder/NL2SH|q20|archive|medium|extract only txt files from archive.tar.gz|6.32|tar -zxvf archive.tar.gz --wildcards '*.txt'
+westenfelder/NL2SH|q21|system|easy|show disk usage of the current directory in human readable form|3.55|du -h .
+westenfelder/NL2SH|q22|system|medium|show the 5 largest directories under /var|7.51|du -a /var ¦ sort -n -r ¦ head -n 5
+westenfelder/NL2SH|q23|git|easy|show the last 5 git commits in one line each|4.88|git log -n 5 --oneline
+westenfelder/NL2SH|q24|git|medium|list files changed in the last commit|3.85|git whatchanged -1
+westenfelder/NL2SH|q25|git|hard|find the commit that introduced the string getUserById|13.61|git rev-list --first-parent HEAD ¦ xargs git show -s --pretty=format:%H ¦ grep 'getUserById' ¦ tail -n1

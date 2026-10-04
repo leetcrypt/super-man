@@ -1,0 +1,5 @@
+[0;31mError: No command provided[0m
+Usage: super-man explain "command with flags"
+
+Example:
+  super-man explain "tar -czf archive.tar.gz folder/"

@@ -1,0 +1,231 @@
+[1m[0;36m
+═══════════════════════════════════════════════════════════
+  Super Man Test Suite
+  2026-06-13 10:17:53
+═══════════════════════════════════════════════════════════
+[0m
+Testing script: /home/dell/coding/bash/super-man/super-man.sh
+Test logs: ./tests/logs
+
+
+[1m[0;34m▶ Testing: Help & Informational Modes[0m
+[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[0;36mTest #1: Help display (--help)[0m
+[0;31m✗ FAILED[0m - Output does not contain: "Super Man"
+[0;33m  Log: ./tests/logs/test_1_Help_display_help.log[0m
+
+[0;36mTest #2: Help display (-h)[0m
+[0;32m✓ PASSED[0m (33ms) - Output contains: "QUICK START"
+
+[0;36mTest #3: List all commands (--list)[0m
+[0;32m✓ PASSED[0m (49ms) - Output contains: "Available commands"
+
+[0;36mTest #4: List all commands (-l)[0m
+[0;32m✓ PASSED[0m (46ms) - Output contains: "commands"
+
+[1m[0;34m▶ Testing: Natural Language Query Modes[0m
+[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[0;36mTest #5: Ask mode - find large files[0m
+[0;32m✓ PASSED[0m (552ms) - Output contains: "find"
+
+[0;36mTest #6: Ask mode - compress folder[0m
+[0;32m✓ PASSED[0m (570ms) - Output contains: "tar"
+
+[0;36mTest #7: Ask mode - disk usage[0m
+[0;32m✓ PASSED[0m (562ms) - Output contains: "du"
+
+[0;36mTest #8: Ask mode - search text[0m
+[0;32m✓ PASSED[0m (570ms) - Output contains: "grep"
+
+[0;36mTest #9: Ask mode - symlink[0m
+[0;32m✓ PASSED[0m (562ms) - Output contains: "ln -s"
+
+[0;36mTest #10: Task mode - find files[0m
+[0;32m✓ PASSED[0m (615ms) - Output contains: "find"
+
+[0;36mTest #11: Task mode - network[0m
+[0;32m✓ PASSED[0m (624ms) - Output contains: "ping\|curl\|wget"
+
+[1m[0;34m▶ Testing: Category Browsing[0m
+[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[0;36mTest #12: Category - files[0m
+[0;32m✓ PASSED[0m (3438ms) - Output contains: "File Operations"
+
+[0;36mTest #13: Category - text[0m
+[0;32m✓ PASSED[0m (2126ms) - Output contains: "Text Processing"
+
+[0;36mTest #14: Category - network[0m
+[0;32m✓ PASSED[0m (1872ms) - Output contains: "Network Operations"
+
+[0;36mTest #15: Category - system[0m
+[0;32m✓ PASSED[0m (2858ms) - Output contains: "System Monitoring"
+
+[0;36mTest #16: Category - list all (no argument)[0m
+[0;32m✓ PASSED[0m (68ms) - Output contains: "Available categories"
+
+[0;36mTest #17: Category - invalid category[0m
+[0;32m✓ PASSED[0m (111ms)
+
+[1m[0;34m▶ Testing: Command Explanation[0m
+[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[0;36mTest #18: Explain - tar command[0m
+[0;32m✓ PASSED[0m (307ms) - Output contains: "tar"
+
+[0;36mTest #19: Explain - find command[0m
+[0;32m✓ PASSED[0m (349ms) - Output contains: "find"
+
+[0;36mTest #20: Explain - grep command[0m
+[0;32m✓ PASSED[0m (305ms) - Output contains: "grep"
+
+[0;36mTest #21: Explain - simple command[0m
+[0;32m✓ PASSED[0m (287ms) - Output contains: "ls"
+
+[1m[0;34m▶ Testing: Direct Flag Lookup[0m
+[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[0;36mTest #22: Direct lookup - ls size[0m
+[0;31m✗ FAILED[0m - Output does not contain: "size\|SIZE"
+[0;33m  Log: ./tests/logs/test_22_Direct_lookup__ls_size.log[0m
+
+[0;36mTest #23: Direct lookup - grep -v[0m
+[0;31m✗ FAILED[0m - Output does not contain: "invert"
+[0;33m  Log: ./tests/logs/test_23_Direct_lookup__grep_v.log[0m
+
+[0;36mTest #24: Direct lookup - tar extract[0m
+[0;31m✗ FAILED[0m - Output does not contain: "extract"
+[0;33m  Log: ./tests/logs/test_24_Direct_lookup__tar_extract.log[0m
+
+[0;36mTest #25: Direct lookup - find name[0m
+[0;31m✗ FAILED[0m - Output does not contain: "name"
+[0;33m  Log: ./tests/logs/test_25_Direct_lookup__find_name.log[0m
+
+[0;36mTest #26: Direct lookup - df human[0m
+[0;31m✗ FAILED[0m - Output does not contain: "human"
+[0;33m  Log: ./tests/logs/test_26_Direct_lookup__df_human.log[0m
+
+[0;36mTest #27: Direct lookup - ls (no filter)[0m
+[0;32m✓ PASSED[0m (205ms) - Output contains: "ls"
+
+[1m[0;34m▶ Testing: AI Mode[0m
+[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[0;36mTest #28: AI mode - find python files[0m
+[0;32m✓ PASSED[0m (4449ms) - Output contains: "find"
+
+[0;36mTest #29: AI mode - compress logs[0m
+[0;32m✓ PASSED[0m (7426ms) - Output contains: "tar\|gzip\|zip"
+
+[0;36mTest #30: AI mode - disk usage[0m
+[0;32m✓ PASSED[0m (4418ms) - Output contains: "du\|df"
+
+[1m[0;34m▶ Testing: Error Handling[0m
+[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[0;36mTest #31: Invalid mode[0m
+[0;31m✗ FAILED[0m (exit code: 0, expected: 1)
+[0;33m  Log: ./tests/logs/test_31_Invalid_mode.log[0m
+
+[0;36mTest #32: Empty query to ask mode[0m
+[0;32m✓ PASSED[0m (27ms) - Output contains: "Error\|Usage"
+
+[0;36mTest #33: Empty query to explain mode[0m
+[0;32m✓ PASSED[0m (25ms) - Output contains: "Error\|Usage"
+
+[1m[0;34m▶ Testing: Edge Cases[0m
+[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[0;36mTest #34: Query with special characters[0m
+[0;32m✓ PASSED[0m (648ms) - Output contains: "find"
+
+[0;36mTest #35: Very long query[0m
+[0;32m✓ PASSED[0m (797ms) - Output contains: "find"
+
+[0;36mTest #36: Query with quotes[0m
+[0;32m✓ PASSED[0m (589ms) - Output contains: "grep"
+
+[0;36mTest #37: Multiple word filter[0m
+[0;31m✗ FAILED[0m - Output does not contain: "sort"
+[0;33m  Log: ./tests/logs/test_37_Multiple_word_filter.log[0m
+
+[1m[0;34m▶ Testing: Performance Benchmarks[0m
+[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[0;35m[1mRunning performance benchmarks (10 iterations each)[0m
+
+
+[0;35mBenchmark: Ask mode - find large files[0m (10 iterations)
+..........
+[0;32m  Average: 622ms[0m
+[0;36m  Min: 581ms | Max: 656ms[0m
+[0;33m  Success rate: 10/10[0m
+
+[0;35mBenchmark: Category - files[0m (10 iterations)
+..........
+[0;32m  Average: 3432ms[0m
+[0;36m  Min: 3360ms | Max: 3626ms[0m
+[0;33m  Success rate: 10/10[0m
+
+[0;35mBenchmark: Explain - tar command[0m (10 iterations)
+..........
+[0;32m  Average: 321ms[0m
+[0;36m  Min: 306ms | Max: 353ms[0m
+[0;33m  Success rate: 10/10[0m
+
+[0;35mBenchmark: Direct lookup - ls size[0m (10 iterations)
+..........
+[0;32m  Average: 138ms[0m
+[0;36m  Min: 128ms | Max: 149ms[0m
+[0;33m  Success rate: 10/10[0m
+
+[0;35mBenchmark: Help display[0m (10 iterations)
+..........
+[0;32m  Average: 29ms[0m
+[0;36m  Min: 27ms | Max: 34ms[0m
+[0;33m  Success rate: 10/10[0m
+
+[0;35mBenchmark: List commands[0m (10 iterations)
+..........
+[0;32m  Average: 49ms[0m
+[0;36m  Min: 45ms | Max: 68ms[0m
+[0;33m  Success rate: 10/10[0m
+
+[1m[0;36m
+═══════════════════════════════════════════════════════════
+  Test Summary
+═══════════════════════════════════════════════════════════
+[0m
+[1mResults:[0m
+  Total Tests:  37
+  [0;32mPassed:       29[0m
+  [0;31mFailed:       8[0m
+  [0;33mSkipped:      0[0m
+
+[1mPass Rate: 78%[0m
+
+[1mPerformance:[0m
+[0;36m  Fastest tests:[0m
+    25ms - Empty query to explain mode
+    27ms - Empty query to ask mode
+    33ms - Help display (-h)
+    41ms - Help display (--help)
+    46ms - List all commands (-l)
+[0;33m  Slowest tests:[0m
+    7426ms - AI mode - compress logs
+    4449ms - AI mode - find python files
+    4418ms - AI mode - disk usage
+    3438ms - Category - files
+    2858ms - Category - system
+
+[0;36mLogs saved to: ./tests/logs[0m
+[0;36mPerformance data: ./tests/performance[0m
+
+[1m[0;36m═══════════════════════════════════════════════════════════[0m
+
+[0;32mJSON report generated: ./tests/logs/test-report.json[0m
+[0;36mTest execution complete![0m
+[0;36mView detailed logs in: ./tests/logs[0m
+[0;36mView performance data in: ./tests/performance[0m

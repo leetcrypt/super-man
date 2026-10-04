@@ -1,0 +1,13 @@
+timestamp|benchmark_name|avg_ms|min_ms|max_ms|success_count|iterations
+2026-06-13 10:15:59|Ask mode - find large files|652|616|718|10|10
+2026-06-13 10:16:37|Category - files|3770|3431|3997|10|10
+2026-06-13 10:16:40|Explain - tar command|334|313|398|10|10
+2026-06-13 10:16:41|Direct lookup - ls size|138|133|154|10|10
+2026-06-13 10:16:42|Help display|28|28|31|10|10
+2026-06-13 10:16:42|List commands|49|45|54|10|10
+2026-06-13 10:18:35|Ask mode - find large files|622|581|656|10|10
+2026-06-13 10:19:10|Category - files|3432|3360|3626|10|10
+2026-06-13 10:19:13|Explain - tar command|321|306|353|10|10
+2026-06-13 10:19:14|Direct lookup - ls size|138|128|149|10|10
+2026-06-13 10:19:15|Help display|29|27|34|10|10
+2026-06-13 10:19:15|List commands|49|45|68|10|10

@@ -1,0 +1,83 @@
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;36mCategory:[0m [0;32mFile Operations[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+[0;36m1.[0m [0;32mList files sorted by size (largest first)[0m
+   [0;35mls -lhS[0m
+
+[0;36m2.[0m [0;32mFind files larger than 100MB[0m
+   [0;35mfind . -type f -size +100M -exec ls -lh {} \;[0m
+
+[0;36m3.[0m [0;32mCompress a folder into tar.gz archive[0m
+   [0;35mtar -czf archive.tar.gz folder/[0m
+
+[0;36m4.[0m [0;32mShow disk usage of directories[0m
+   [0;35mdu -sh */[0m
+
+[0;36m5.[0m [0;32mFind files by name pattern[0m
+   [0;35mfind . -name "*.txt"[0m
+
+[0;36m6.[0m [0;32mChange file permissions[0m
+   [0;35mchmod 755 file.sh[0m
+
+[0;36m7.[0m [0;32mFind duplicate files by content[0m
+   [0;35mfind . -type f -exec md5sum {} + | sort | uniq -w32 -dD[0m
+
+[0;36m8.[0m [0;32mCreate symbolic link to file or directory[0m
+   [0;35mln -s /path/to/file link-name[0m
+
+[0;36m9.[0m [0;32mExtract compressed archive files[0m
+   [0;35mtar -xzf archive.tar.gz[0m
+
+[0;36m10.[0m [0;32mCopy files and directories[0m
+   [0;35mcp -r source/ dest/[0m
+
+[0;36m11.[0m [0;32mMove or rename files and directories[0m
+   [0;35mmv old.txt new.txt[0m
+
+[0;36m12.[0m [0;32mDelete files and directories[0m
+   [0;35mrm file.txt[0m
+
+[0;36m13.[0m [0;32mCreate new directories[0m
+   [0;35mmkdir new-folder[0m
+
+[0;36m14.[0m [0;32mChange file owner and group[0m
+   [0;35mchown user:group file.txt[0m
+
+[0;36m15.[0m [0;32mSynchronize directories efficiently[0m
+   [0;35mrsync -av source/ dest/[0m
+
+[0;36m16.[0m [0;32mFind recently modified files[0m
+   [0;35mfind . -type f -mtime -1[0m
+
+[0;36m17.[0m [0;32mFind and remove empty directories[0m
+   [0;35mfind . -type d -empty[0m
+
+[0;36m18.[0m [0;32mCreate an empty file or update its timestamps[0m
+   [0;35mtouch file.txt[0m
+
+[0;36m19.[0m [0;32mShow detailed file metadata: size, permissions, timestamps, inode[0m
+   [0;35mstat file.txt[0m
+
+[0;36m20.[0m [0;32mDetect a file's real type by inspecting its contents[0m
+   [0;35mfile document.pdf[0m
+
+[0;36m21.[0m [0;32mDisplay directories and files as an indented tree[0m
+   [0;35mtree[0m
+
+[0;36m22.[0m [0;32mStrip a path down to its filename or its directory[0m
+   [0;35mbasename /path/to/file.txt[0m
+
+[0;36m23.[0m [0;32mCreate a .zip archive (portable, Windows-friendly)[0m
+   [0;35mzip -r archive.zip folder/[0m
+
+[0;36m24.[0m [0;32mExtract or inspect a .zip archive[0m
+   [0;35munzip archive.zip[0m
+
+[0;36m25.[0m [0;32mList block devices, partitions and mount points as a tree[0m
+   [0;35mlsblk[0m
+
+[0;36m26.[0m [0;32mAttach (mount) or detach (unmount) a filesystem[0m
+   [0;35msudo mount /dev/sdb1 /mnt[0m
+

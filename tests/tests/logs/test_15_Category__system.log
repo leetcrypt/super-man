@@ -1,0 +1,71 @@
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;36mCategory:[0m [0;32mSystem Monitoring[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+[0;36m1.[0m [0;32mMonitor CPU and process usage in real-time[0m
+   [0;35mtop[0m
+
+[0;36m2.[0m [0;32mDisplay memory usage information[0m
+   [0;35mfree -h[0m
+
+[0;36m3.[0m [0;32mStop/kill a running process[0m
+   [0;35mkill PID[0m
+
+[0;36m4.[0m [0;32mList all running processes[0m
+   [0;35mps aux[0m
+
+[0;36m5.[0m [0;32mExecute command repeatedly and display results[0m
+   [0;35mwatch -n 2 command[0m
+
+[0;36m6.[0m [0;32mShow available disk space on filesystems[0m
+   [0;35mdf -h[0m
+
+[0;36m7.[0m [0;32mShow system uptime and load average[0m
+   [0;35muptime[0m
+
+[0;36m8.[0m [0;32mManage and inspect system services[0m
+   [0;35msystemctl status nginx[0m
+
+[0;36m9.[0m [0;32mView and follow system logs[0m
+   [0;35mjournalctl -xe[0m
+
+[0;36m10.[0m [0;32mFind which process is using a port[0m
+   [0;35mlsof -i :8080[0m
+
+[0;36m11.[0m [0;32mSchedule recurring tasks with cron[0m
+   [0;35mcrontab -e[0m
+
+[0;36m12.[0m [0;32mShow CPU and hardware information[0m
+   [0;35mlscpu[0m
+
+[0;36m13.[0m [0;32mView kernel ring buffer messages[0m
+   [0;35mdmesg[0m
+
+[0;36m14.[0m [0;32mFind or kill processes by name instead of PID[0m
+   [0;35mpkill firefox[0m
+
+[0;36m15.[0m [0;32mInteractive, colorized process/resource viewer[0m
+   [0;35mhtop[0m
+
+[0;36m16.[0m [0;32mShow kernel, architecture and OS identification[0m
+   [0;35muname -a[0m
+
+[0;36m17.[0m [0;32mFind where a command lives and what it resolves to[0m
+   [0;35mwhich python3[0m
+
+[0;36m18.[0m [0;32mView, search and reuse previously run commands[0m
+   [0;35mhistory[0m
+
+[0;36m19.[0m [0;32mRun, suspend and manage background/foreground jobs[0m
+   [0;35mcommand &[0m
+
+[0;36m20.[0m [0;32mRun a command but kill it if it exceeds a time limit[0m
+   [0;35mtimeout 10 command[0m
+
+[0;36m21.[0m [0;32mPrint or format the current date/time, or convert dates[0m
+   [0;35mdate '+%Y-%m-%d %H:%M:%S'[0m
+
+[0;36m22.[0m [0;32mReport the number of available CPU cores[0m
+   [0;35mnproc[0m
+

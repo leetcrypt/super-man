@@ -1,0 +1,12 @@
+[0;33mAvailable categories:[0m
+
+  files : File Operations
+  text : Text Processing
+  system : System Monitoring
+  network : Network Operations
+  git : Git Version Control
+  users : User Management
+  packages : Package Management
+  docker : Docker
+
+Usage: super-man category NAME

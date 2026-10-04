@@ -1,0 +1,20 @@
+[0;36mSearching for:[0m "compress folder"
+
+[0;32mFound 5 matches:[0m
+
+[0;36m1.[0m [0;32mCompress a folder into tar.gz archive[0m
+   [0;35mtar -czf archive.tar.gz folder/[0m
+
+[0;36m2.[0m [0;32mCreate a .zip archive (portable, Windows-friendly)[0m
+   [0;35mzip -r archive.zip folder/[0m
+
+[0;36m3.[0m [0;32mExtract compressed archive files[0m
+   [0;35mtar -xzf archive.tar.gz[0m
+
+[0;36m4.[0m [0;32mCreate new directories[0m
+   [0;35mmkdir new-folder[0m
+
+[0;36m5.[0m [0;32mFind and remove empty directories[0m
+   [0;35mfind . -type d -empty[0m
+
+[0;33mTip:[0m Use more specific keywords to narrow results

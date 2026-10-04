@@ -1,0 +1,21 @@
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;33mCommand:[0m [0;35mgrep -r "pattern" .[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+[0;36m[1mSYNTAX:[0m
+  [0;36m[1mgrep[0m [OPTION[2m...[0m] [0;35mPATTERNS[0m [FILE[2m...[0m]        grep [OPTION[2m...[0m] -e [0;35mPATTERNS[0m [2m...[0m [FILE[2m...[0m]        grep [OPTION[2m...[0m] -f [0;35mPATTERN_FILE[0m [2m...[0m [FILE[2m...[0m]
+
+[0;36m[1mEXAMPLE:[0m
+  [0;32mgrep 'pattern' file.txt   # Search for text in a file[0m
+
+[0;32mDescription:[0m Search for text pattern in files recursively
+
+[0;33mFlag explanations:[0m
+  -r : Recursive search in subdirectories
+  -i : Case-insensitive matching
+  -n : Show line numbers
+  --include : Only search files matching the given glob (e.g. *.log)
+
+
+[0;34m═══════════════════════════════════════════════════════════[0m

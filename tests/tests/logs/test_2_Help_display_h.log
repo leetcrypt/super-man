@@ -1,0 +1,69 @@
+[0;36m ____                          __  __
+/ ___| _   _ _ __   ___ _ __  |  \/  | __ _ _ __
+\___ \| | | | '_ \ / _ \ '__| | |\/| |/ _` | '_ \
+ ___) | |_| | |_) |  __/ |    | |  | | (_| | | | |
+|____/ \__,_| .__/ \___|_|    |_|  |_|\__,_|_| |_|
+            |_|
+[0m[0;33m        Your Intelligent CLI Assistant for Bash[0m
+
+[1m[0;33mQUICK START[0m
+  [0;32msuper-man ask "find large files"[0m     # Ask a question
+  [0;32msuper-man category files[0m             # Browse by category
+  [0;32msuper-man explain "tar -czf"[0m         # Explain a command
+
+[1m[0;33mMODES[0m
+  [0;36mNatural Language Queries:[0m
+    [0;32mask[0m "query"           Ask in natural language (database)
+    [0;32mtask[0m "description"    Describe what you want to do (database)
+    [0;32mai[0m "complex query"    Text-to-bash one-liner, fully local (advanced) 🤖
+
+  [0;36mBrowse & Explore:[0m
+    [0;32mcategory[0m NAME          Browse by category (files/text/network/system)
+    [0;32mexplain[0m "command"      Explain what a command does
+    [0;32mtheme[0m [seed|show|off]  Roll a coherent color theme (truecolor; Ctrl-T in fzf)
+
+  [0;36mDirect Lookup:[0m
+    [0;32mCOMMAND [FILTER][0m       Show flags for command (e.g., ls size)
+    [0;32m-i[0m, [0;32m--interactive[0m      Interactive fzf mode
+    [0;32m-l[0m, [0;32m--list[0m             List all commands
+
+[1m[0;33mCATEGORIES[0m (20+ tasks)
+  [0;36mfiles[0m    File operations (compress, find, permissions, symlinks)
+  [0;36mtext[0m     Text processing (search, replace, compare, count)
+  [0;36mnetwork[0m  Network ops (download, ports, ping)
+  [0;36msystem[0m   System monitoring (cpu, memory, processes)
+
+[1m[0;33mEXAMPLES[0m
+  [2m# Natural language[0m
+  super-man ask "compress folder"
+  super-man ask "search text in files"
+  super-man task "monitor cpu usage"
+
+  [2m# Browse and learn[0m
+  super-man category network
+  super-man explain "find . -name '*.txt'"
+
+  [2m# Original modes (still work)[0m
+  super-man ls size          # Direct flag lookup
+  super-man                  # Interactive fzf mode
+
+[1m[0;33mREQUIREMENTS[0m
+  [0;32m✓[0m jq (for natural language queries)
+  [0;32m✓[0m fzf (for interactive mode only)
+
+[1m[0;33mAI MODE[0m 🤖 (text-to-bash, fully local via ollama)
+    [0;32msuper-man ai "find python files modified last week"[0m
+    [0;32msuper-man ai -q "count lines in all js files"[0m      # print ONLY the command
+    [0;32msuper-man ai --compare "list the 5 largest files"[0m  # A/B models
+
+  [2m-q/--raw prints just the command — pipeable:[0m
+    [0;32m$(super-man ai -q "...")[0m   or   [0;32msuper-man ai -q "..." | tee cmd.sh[0m
+
+  Default model: [0;36mwestenfelder/NL2SH[0m
+  Configure via env vars:
+    SUPERMAN_AI_MODEL           default model (e.g. qwen2.5-coder:1.5b for speed)
+    SUPERMAN_AI_COMPARE_MODELS  space-separated list for --compare
+
+[0;33mDatabase:[0m /home/dell/coding/bash/super-man/commands-db.json
+[0;33mVersion:[0m 2.3.0 (250+ commands, local text-to-bash AI)
+

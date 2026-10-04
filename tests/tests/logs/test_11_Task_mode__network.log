@@ -1,0 +1,20 @@
+[0;36mSearching for:[0m "network"
+
+[0;32mFound 5 matches:[0m
+
+[0;36m1.[0m [0;32mTest network connectivity to host[0m
+   [0;35mping google.com[0m
+
+[0;36m2.[0m [0;32mShow network interfaces, IP addresses and routes[0m
+   [0;35mip addr[0m
+
+[0;36m3.[0m [0;32mCheck which ports are open and listening[0m
+   [0;35mss -tulpn[0m
+
+[0;36m4.[0m [0;32mFind your public and local IP addresses[0m
+   [0;35mcurl -s ifconfig.me[0m
+
+[0;36m5.[0m [0;32mScan a host for open ports and running services[0m
+   [0;35mnmap host[0m
+
+[0;33mTip:[0m Use more specific keywords to narrow results

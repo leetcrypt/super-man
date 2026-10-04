@@ -1,0 +1,196 @@
+{
+  "timestamp": "2026-06-13 10:19:15",
+  "summary": {
+    "total": 37,
+    "passed": 29,
+    "failed": 8,
+    "skipped": 0
+  },
+  "tests": [
+    {
+      "name": "Ask mode - find large files",
+      "result": "PASSED",
+      "duration_ms": 552
+    },
+    {
+      "name": "Task mode - network",
+      "result": "PASSED",
+      "duration_ms": 624
+    },
+    {
+      "name": "Category - files",
+      "result": "PASSED",
+      "duration_ms": 3438
+    },
+    {
+      "name": "Explain - tar command",
+      "result": "PASSED",
+      "duration_ms": 307
+    },
+    {
+      "name": "Direct lookup - ls size",
+      "result": "FAILED",
+      "duration_ms": 131
+    },
+    {
+      "name": "Category - list all (no argument)",
+      "result": "PASSED",
+      "duration_ms": 68
+    },
+    {
+      "name": "Query with quotes",
+      "result": "PASSED",
+      "duration_ms": 589
+    },
+    {
+      "name": "Direct lookup - find name",
+      "result": "FAILED",
+      "duration_ms": 214
+    },
+    {
+      "name": "Query with special characters",
+      "result": "PASSED",
+      "duration_ms": 648
+    },
+    {
+      "name": "Explain - simple command",
+      "result": "PASSED",
+      "duration_ms": 287
+    },
+    {
+      "name": "Very long query",
+      "result": "PASSED",
+      "duration_ms": 797
+    },
+    {
+      "name": "Category - invalid category",
+      "result": "PASSED",
+      "duration_ms": 111
+    },
+    {
+      "name": "Task mode - find files",
+      "result": "PASSED",
+      "duration_ms": 615
+    },
+    {
+      "name": "Empty query to explain mode",
+      "result": "PASSED",
+      "duration_ms": 25
+    },
+    {
+      "name": "Direct lookup - df human",
+      "result": "FAILED",
+      "duration_ms": 129
+    },
+    {
+      "name": "Category - network",
+      "result": "PASSED",
+      "duration_ms": 1872
+    },
+    {
+      "name": "Direct lookup - ls (no filter)",
+      "result": "PASSED",
+      "duration_ms": 205
+    },
+    {
+      "name": "List all commands (-l)",
+      "result": "PASSED",
+      "duration_ms": 46
+    },
+    {
+      "name": "Invalid mode",
+      "result": "FAILED",
+      "duration_ms": 62
+    },
+    {
+      "name": "Direct lookup - grep -v",
+      "result": "FAILED",
+      "duration_ms": 154
+    },
+    {
+      "name": "AI mode - compress logs",
+      "result": "PASSED",
+      "duration_ms": 7426
+    },
+    {
+      "name": "AI mode - disk usage",
+      "result": "PASSED",
+      "duration_ms": 4418
+    },
+    {
+      "name": "Multiple word filter",
+      "result": "FAILED",
+      "duration_ms": 131
+    },
+    {
+      "name": "Direct lookup - tar extract",
+      "result": "FAILED",
+      "duration_ms": 171
+    },
+    {
+      "name": "Ask mode - symlink",
+      "result": "PASSED",
+      "duration_ms": 562
+    },
+    {
+      "name": "Category - text",
+      "result": "PASSED",
+      "duration_ms": 2126
+    },
+    {
+      "name": "Ask mode - search text",
+      "result": "PASSED",
+      "duration_ms": 570
+    },
+    {
+      "name": "Ask mode - compress folder",
+      "result": "PASSED",
+      "duration_ms": 570
+    },
+    {
+      "name": "List all commands (--list)",
+      "result": "PASSED",
+      "duration_ms": 49
+    },
+    {
+      "name": "Help display (--help)",
+      "result": "FAILED",
+      "duration_ms": 41
+    },
+    {
+      "name": "Help display (-h)",
+      "result": "PASSED",
+      "duration_ms": 33
+    },
+    {
+      "name": "Category - system",
+      "result": "PASSED",
+      "duration_ms": 2858
+    },
+    {
+      "name": "Ask mode - disk usage",
+      "result": "PASSED",
+      "duration_ms": 562
+    },
+    {
+      "name": "Explain - find command",
+      "result": "PASSED",
+      "duration_ms": 349
+    },
+    {
+      "name": "Empty query to ask mode",
+      "result": "PASSED",
+      "duration_ms": 27
+    },
+    {
+      "name": "AI mode - find python files",
+      "result": "PASSED",
+      "duration_ms": 4449
+    },
+    {
+      "name": "Explain - grep command",
+      "result": "PASSED",
+      "duration_ms": 305
+    }
+  ]
+}

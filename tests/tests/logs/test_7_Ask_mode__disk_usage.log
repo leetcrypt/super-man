@@ -1,0 +1,20 @@
+[0;36mSearching for:[0m "disk usage"
+
+[0;32mFound 5 matches:[0m
+
+[0;36m1.[0m [0;32mShow disk usage of directories[0m
+   [0;35mdu -sh */[0m
+
+[0;36m2.[0m [0;32mMonitor CPU and process usage in real-time[0m
+   [0;35mtop[0m
+
+[0;36m3.[0m [0;32mDisplay memory usage information[0m
+   [0;35mfree -h[0m
+
+[0;36m4.[0m [0;32mShow available disk space on filesystems[0m
+   [0;35mdf -h[0m
+
+[0;36m5.[0m [0;32mReclaim disk by removing unused Docker data[0m
+   [0;35mdocker system prune[0m
+
+[0;33mTip:[0m Use more specific keywords to narrow results

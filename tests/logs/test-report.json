@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-06-13 10:19:15",
+  "summary": {
+    "total": 4,
+    "passed": 2,
+    "failed": 2,
+    "skipped": 0
+  },
+  "tests": [
+    {
+      "name": "Multiple command selections",
+      "result": "FAILED",
+      "duration_ms": 
+    },
+    {
+      "name": "Interactive filtering",
+      "result": "PARTIAL",
+      "duration_ms": 
+    },
+    {
+      "name": "Interactive mode launch",
+      "result": "FAILED",
+      "duration_ms": 
+    },
+    {
+      "name": "Interactive command selection",
+      "result": "PARTIAL",
+      "duration_ms": 
+    }
+  ]
+}

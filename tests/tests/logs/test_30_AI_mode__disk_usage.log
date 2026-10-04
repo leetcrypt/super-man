@@ -1,0 +1,18 @@
+
+[0;36m🤖 AI Assistant — westenfelder/NL2SH[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;33mQuery:[0m show disk usage by directory
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+[2mGenerating bash command...[0m
+
+[0;32mGenerated Command:[0m
+  [0;35mdu -h --max-depth=1[0m
+
+[0;33mCommand Info:[0m
+       du - estimate file space usage
+
+
+[2mNote: Always review AI-generated commands before running them![0m
+
+[0;34m═══════════════════════════════════════════════════════════[0m

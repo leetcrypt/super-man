@@ -1,0 +1,22 @@
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;33mCommand:[0m [0;35mtar -czf archive.tar.gz folder/[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+[0;36m[1mSYNTAX:[0m
+  [0;36m[1mTraditional[0m usage        tar {A|c|d|r|t|u|x}[GnSkUWOmpsMBiajJzZhPlRvwo] [ARG[2m...[0m]     [0;35mUNIX[0m-style usage        tar -A [[0;33mOPTIONS[0m] -f [0;35mARCHIVE[0m ARCHIVE[2m...[0m         tar -c [-f [0;35mARCHIVE[0m] [[0;33mOPTIONS[0m] [FILE[2m...[0m]         tar -d [-f [0;35mARCHIVE[0m] [[0;33mOPTIONS[0m] [FILE[2m...[0m]         tar -r [-f [0;35mARCHIVE[0m] [[0;33mOPTIONS[0m] [FILE[2m...[0m]         tar -t [-f [0;35mARCHIVE[0m] [[0;33mOPTIONS[0m] [MEMBER[2m...[0m]
+
+[0;36m[1mEXAMPLE:[0m
+  [0;32mtar -czf archive.tar.gz folder/  # Compress a folder[0m
+
+[0;32mDescription:[0m Compress a folder into tar.gz archive
+
+[0;33mFlag explanations:[0m
+  -c : Create archive
+  -z : Compress with gzip
+  -f : File name follows
+  -x : Extract archive
+  -t : List contents
+
+
+[0;34m═══════════════════════════════════════════════════════════[0m

@@ -1,0 +1,54 @@
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;36mCategory:[0m [0;32mText Processing[0m
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+[0;36m1.[0m [0;32mSearch for text pattern in files recursively[0m
+   [0;35mgrep -r "pattern" .[0m
+
+[0;36m2.[0m [0;32mFind and replace text in files[0m
+   [0;35msed -i 's/old/new/g' file.txt[0m
+
+[0;36m3.[0m [0;32mCount lines, words, or characters in files[0m
+   [0;35mwc -l file.txt[0m
+
+[0;36m4.[0m [0;32mCompare two files and show differences[0m
+   [0;35mdiff file1.txt file2.txt[0m
+
+[0;36m5.[0m [0;32mSort lines of text in a file[0m
+   [0;35msort file.txt[0m
+
+[0;36m6.[0m [0;32mFilter or count repeated lines[0m
+   [0;35msort file.txt | uniq[0m
+
+[0;36m7.[0m [0;32mExtract columns or fields from text[0m
+   [0;35mawk '{print $1}' file.txt[0m
+
+[0;36m8.[0m [0;32mView file contents with paging[0m
+   [0;35mless file.txt[0m
+
+[0;36m9.[0m [0;32mParse and query JSON data[0m
+   [0;35mjq '.key' file.json[0m
+
+[0;36m10.[0m [0;32mCount word or value frequency[0m
+   [0;35mtr ' ' '
+' < file.txt | sort | uniq -c | sort -nr[0m
+
+[0;36m11.[0m [0;32mFollow a file as it grows (live log streaming)[0m
+   [0;35mtail -f /var/log/syslog[0m
+
+[0;36m12.[0m [0;32mShow the first or last N lines of a file[0m
+   [0;35mhead -n 20 file.txt[0m
+
+[0;36m13.[0m [0;32mExtract columns/fields from delimited text[0m
+   [0;35mcut -d',' -f1,3 file.csv[0m
+
+[0;36m14.[0m [0;32mBuild and run commands from stdin (one per item or batched)[0m
+   [0;35mfind . -name '*.log' | xargs rm[0m
+
+[0;36m15.[0m [0;32mWrite output to a file and the screen at the same time[0m
+   [0;35mcommand | tee output.log[0m
+
+[0;36m16.[0m [0;32mAlign whitespace/CSV data into neat columns[0m
+   [0;35mcat data.txt | column -t[0m
+

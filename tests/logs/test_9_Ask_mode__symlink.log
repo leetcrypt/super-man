@@ -1,0 +1,29 @@
+[0;36mSearching for:[0m "symlink"
+
+[0;34m═══════════════════════════════════════════════════════════[0m
+[0;32mTask:[0m Create symbolic link to file or directory
+[0;36mCategory:[0m files
+[0;34m═══════════════════════════════════════════════════════════[0m
+
+[0;33mCommand:[0m
+  [0;35mln -s /path/to/file link-name[0m
+
+[0;33mFlags explained:[0m
+  -s : Create symbolic (soft) link
+  -f : Force (overwrite existing link)
+  readlink : Show where link points
+
+[0;33mExamples:[0m
+  Create symbolic link
+    → ln -s /path/to/original /path/to/link
+
+  Link to current directory
+    → ln -s /path/to/file .
+
+  View where link points
+    → ls -l link-name
+
+[0;33mRelated tasks:[0m
+  • Change file permissions (id: file-permissions)
+
+[0;34m═══════════════════════════════════════════════════════════[0m
